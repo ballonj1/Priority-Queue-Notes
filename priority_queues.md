@@ -13,3 +13,6 @@ API
 
 ## Elementary implementations
 1. We can use an array or linked list (ordered or unordered)
+-> Unordered sequences -> Prototypical lazy approach to this problem, where we defer doing the work until necessary
+-> Ordered sequences -> Prototypical lazy approach to this problem, where we do as much work as we can upfront, keeping the sequence ordered so later operations are more efficient
+The heap data structure helps us create implementations of priority queues that can remove the min/max and insert quickly
