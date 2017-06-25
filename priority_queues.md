@@ -38,6 +38,14 @@ Three public methods
 -> We should swap the node at the top of the heap with the item in the bottom-most right-most position and then reorder
 -> The swapped item should loop at its children and heapify down until it is in the correct position
 
+## Implementation
+Under the hood, the heap is stored as an array.
+1. Peek will look at the element in the first index -> store[0]
+2. Insert -> We'll push on an element and look at that elements parent to see if it should be swapped.  This process will continue until the item above it is less than or equal to it
+3. Extract -> We'll swap the min element with whatever is in the last node.  We then heapify down until that swapped element is in the correct place.
+-> Formula
+1. Given parent index, its children are located at 2i+1 and 2i+2
+
 
 -> A heap is a binary tree that follows a certain set of constraints
 
@@ -51,3 +59,6 @@ We care about completeness when we're working with heaps
 For each node, its parent must be less than or equal to it.
 -> Each node must obey the heap property
 1. The node must be greater than or equal to its parent
+
+
+## Heapsort
