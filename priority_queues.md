@@ -36,7 +36,7 @@ Three public methods
 -> Similar to pop - You remove the minimum value in the data structure and removes it
 -> In order for the completeness property to remain true, we should remove the bottom-most and right-most thing
 -> We should swap the node at the top of the heap with the item in the bottom-most right-most position and then reorder
--> The swapped item should 
+-> The swapped item should loop at its children and heapify down until it is in the correct position
 
 
 -> A heap is a binary tree that follows a certain set of constraints
