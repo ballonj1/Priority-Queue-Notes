@@ -62,3 +62,31 @@ For each node, its parent must be less than or equal to it.
 
 
 ## Heapsort
+-> A relatively common sort -> quicksort or mergesort
+1. Our input is an array
+-> The input does not effect the runtime
+2. We add each element to the heap and heapify up
+-> For each element that we insert, we'll look at its parents to see if it's in the correct position
+-> In the resulting heap, we know that our extract function will always return the smallest element
+-> Every time we extract, we need to heapify again
+-> To turn this heap into a sorted heap, we'll extract every element from the heap and insert it into a new array
+->Heapsort can be done in place to reduce space complexity
+
+
+## Heapsort with constant space
+1. Heapify left to right
+2. Extract right to left
+We'll make use of the fact that under the hood, the heap is just an array.
+-> Useful to think of there being an artificial line that delineates the array in half
+-> Whatever is to the left of the line is part of the heap
+-> Move the boundary one step
+-> Works more elegantly if we use a max heap instead of a min heap
+1. The parents need to be larger than its children
+-> Each time we're adding one more element to the heap and checking to see if we need to heapify that element
+
+Once the artificial line reaches the end of the array and all of the appropriate heapifies take place. we'll have a valid heap.  At this point, we'll start from the right and go to the left.
+1. We'll do a standard extract
+-> We swap the first and last element and move the barrier over one
+1. We move the barrier over by one because the child checker needs to stop when it reaches this line so it doesn't start swapping with elements that are already sorted
+
+Mergesort is also O(nlogn), but it is not an in place sort
